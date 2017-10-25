@@ -3,6 +3,7 @@
 <head>
   <title>First Project</title>
   <script src="aframe-v0.7.1.js"></script>
+  <script> src= "aframe-animation-component.js"</script>
 </head>
 <body>
 <a-scene>
@@ -11,7 +12,11 @@
   </a-assets>
   <a-sphere position="0 1.25 -1" radius="1.25" color="#ff99cc"></a-sphere>
   <a-box position="-1 0.5 1" color="#bf00ff" width="1" height="1"  depth="1"></a-box>
-  <a-cylinder position="1 0.75 1" color="#9999ff" radius="0.5" height="1.5"></a-cylinder>
+  <a-cylinder position="1 0.75 1" color="#9999ff" radius="0.5" height="1.5"
+               animation__scale="property: scale; dir: alternate; dur: 200;
+                          easing: easeInSine; loop: true; to: 1 1 1"
+               animation__yoyo="property: position; dir: alternate; dur: 1000;
+                                easing: easeInSine; loop: true; to: 0 2 0"></a-cylinder>
   <a-plane width="4" height="4" rotation="-90 0 0"></a-plane>
   <a-sky src="#galaxy"></a-sky>
   <a-entity position="0 0 3.8">
